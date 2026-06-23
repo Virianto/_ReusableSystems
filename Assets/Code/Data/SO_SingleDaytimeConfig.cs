@@ -1,7 +1,7 @@
 using System;
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "SingleDaytimeConfig", menuName = "ScriptableObjects/D_SingleDaytime", order = 1)]
+[CreateAssetMenu(fileName = "SingleDaytimeConfig", menuName = "Scriptable Objects/D_SingleDaytime", order = 1)]
 public class SO_SingleDaytimeConfig : ScriptableObject
 {
     public D_SingleDaytime configData;

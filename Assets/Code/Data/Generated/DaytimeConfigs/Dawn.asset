@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a76d56d97742ad40adef42f6a7e215d, type: 3}
+  m_Name: Dawn
+  m_EditorClassIdentifier: Assembly-CSharp::SO_SingleDaytimeConfig
+  configData:
+    daytime: 0
+    mainLightTemperature: 4000
+    lightRotation: {x: 0, y: 70, z: 0}
+    lightIntensity: 3
+    sunOrMoonSize: 1
+    sunOrMoonSizeConvergence: 2
+    atmosphereThickness: 1
+    skyTint: {r: 1, g: 0.627451, b: 0.4784314, a: 1}
+    groundColor: {r: 0.9411765, g: 0.9019608, b: 0.5490196, a: 1}
+    exposure: 1
