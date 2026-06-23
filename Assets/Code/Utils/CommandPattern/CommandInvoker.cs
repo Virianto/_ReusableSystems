@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 
 /// <summary>
-/// Bridge class between the INITIAL CLIENTE and the FINAL RECEIVER of the command
+/// Bridge class between the INITIAL CLIENT and the FINAL RECEIVER of the command
 /// </summary>
 public class CommandInvoker
 {
