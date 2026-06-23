@@ -1,19 +1,158 @@
+using System.Collections.Generic;
+using Code.Utils;
+using DG.Tweening;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 /// <summary>
 /// Daytime Light Manager
+/// This class is responsible for maintaining control over the time of day represented in the scene
+/// and communicating it to other classes via events.
 /// </summary>
-public class M_DaytimeLight
+public class M_DaytimeLight : Singleton<M_DaytimeLight>
 {
-    #region ATTRIBUTES
+    #region ATTRIBUTES    
 
-    
+    #region Events
+
+    public delegate void DawnStarted();
+    public DawnStarted OnDawnStarted;
+
+    public delegate void MiddayStarted();
+    public MiddayStarted OnMiddayStarted;
+
+    public delegate void TwilightStarted();
+    public TwilightStarted OnTwilightStarted;
+
+    public delegate void MidnightStarted();
+    public MidnightStarted OnMidnightStarted;
 
     #endregion
-    
-    #region METHODS
+
+    [Header("External references")]
+
+    [SerializeField] Light mainDirectionalLight;
+
+    [Space(5)]
+
+    [SerializeField] List<SO_SingleDaytimeConfig> allConfigDataList = new();
+
+    [Header("Editable values")]
+
+    [SerializeField] Key nextKey;
+    [SerializeField] Key previousKey;
+
+    [SerializeField] [Range(0.1f, 15)] float transitionTime = 3;
+
+    [SerializeField] Ease transitionEase = Ease.OutCubic;
 
     
+    Material myOwnMat;
+
+    Daytime _currentDaytime = Daytime.Midday;
+
+    public Daytime CurrentDaytime
+    {
+        get => _currentDaytime;
+        set
+        {
+            if(_currentDaytime != value)
+            {
+                _currentDaytime = value;
+                CurrentDaytimeSwitched();
+            }            
+        }
+    }
+
+    #endregion
+
+    #region METHODS
+
+    /// <summary>
+    /// We reference the skybox material that the scene is currently using and avoid
+    /// overwriting it during execution by creating a new instance
+    /// </summary>
+    void Awake()
+    {
+        myOwnMat = new Material(RenderSettings.skybox);
+        RenderSettings.skybox = myOwnMat;
+    }
+
+    void Update()
+    {
+        if(Keyboard.current.allKeys[(int)nextKey - 1].wasPressedThisFrame)
+        {
+            CurrentDaytime = Daytime.Midday;
+        }
+        if (Keyboard.current.allKeys[(int)previousKey - 1].wasPressedThisFrame)
+        {
+            CurrentDaytime = Daytime.Midnight;
+        }
+    }
+
+    void CurrentDaytimeSwitched()
+    {
+        SetNewLightingData(allConfigDataList[(int)CurrentDaytime].configData);
+
+        switch (_currentDaytime)
+        {
+            case Daytime.Dawn:
+            {
+                OnDawnStarted?.Invoke();
+                break;
+            }
+            case Daytime.Midday:
+            {
+                OnMiddayStarted?.Invoke();
+                break;
+            }
+            case Daytime.Twilight:
+            {
+                OnTwilightStarted?.Invoke();
+                break;
+            }
+            case Daytime.Midnight:
+            {
+                OnMidnightStarted?.Invoke();
+                break;
+            }
+        }
+    }
+
+    public void SwitchToPreviousDaytime()
+    {
+        CurrentDaytime = (Daytime)(((int)CurrentDaytime + allConfigDataList.Count - 1) % allConfigDataList.Count);
+    }
+
+    public void SwitchToNextDaytime()
+    {
+        CurrentDaytime = (Daytime)(((int)CurrentDaytime + 1) % allConfigDataList.Count);
+    }    
+
+    void SetNewLightingData(D_SingleDaytime lightingData)
+    {
+        // Modifying lighting configuration
+
+        DOTween.To(() => mainDirectionalLight.colorTemperature, x => mainDirectionalLight.colorTemperature = x, lightingData.mainLightTemperature, transitionTime).SetEase(transitionEase);
+
+        DOTween.To(() => mainDirectionalLight.transform.eulerAngles, x => mainDirectionalLight.transform.eulerAngles = x, lightingData.lightRotation, transitionTime).SetEase(transitionEase);
+
+        DOTween.To(() => mainDirectionalLight.intensity, x => mainDirectionalLight.intensity = x, lightingData.lightIntensity, transitionTime).SetEase(transitionEase);
+
+        // Modifying material configuration
+
+        DOTween.To(() => myOwnMat.GetFloat("_SunSize"), x => myOwnMat.SetFloat("_SunSize", x), lightingData.sunOrMoonSize, transitionTime).SetEase(transitionEase);
+
+        DOTween.To(() => myOwnMat.GetFloat("_SunSizeConvergence"), x => myOwnMat.SetFloat("_SunSizeConvergence", x), lightingData.sunOrMoonSizeConvergence, transitionTime).SetEase(transitionEase);
+
+        DOTween.To(() => myOwnMat.GetFloat("_AtmosphereThickness"), x => myOwnMat.SetFloat("_AtmosphereThickness", x), lightingData.atmosphereThickness, transitionTime).SetEase(transitionEase);
+
+        DOTween.To(() => myOwnMat.GetColor("_SkyTint"), x => myOwnMat.SetColor("_SkyTint", x), lightingData.skyTint, transitionTime).SetEase(transitionEase);
+
+        DOTween.To(() => myOwnMat.GetColor("_GroundColor"), x => myOwnMat.SetColor("_GroundColor", x), lightingData.groundColor, transitionTime).SetEase(transitionEase);
+
+        DOTween.To(() => myOwnMat.GetFloat("_Exposure"), x => myOwnMat.SetFloat("_Exposure", x), lightingData.exposure, transitionTime).SetEase(transitionEase);
+    }
 
     #endregion
 }
