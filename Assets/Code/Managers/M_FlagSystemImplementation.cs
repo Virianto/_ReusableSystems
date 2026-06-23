@@ -1,5 +1,4 @@
 using System;
-using UnityEngine;
 
 [Flags]
 public enum FlagsExample : short
@@ -12,7 +11,7 @@ public enum FlagsExample : short
 
 }
 
-public class B_FlagSystemImplementation : M_FlagSystem<FlagsExample>
+public class M_FlagSystemImplementation : FlagSystem<FlagsExample>
 {
     #region ATTRIBUTES
 

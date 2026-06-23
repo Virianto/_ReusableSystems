@@ -2,11 +2,11 @@ using System;
 using UnityEngine;
 
 /// <summary>
-// Parent class for all managers that require the use of a flags enumeration system.
+/// Parent class for all managers that require the use of a flags enumeration system.
 /// The methods are internal abstract because they cannot be implemented in this class without first knowing the definition of T.
 /// </summary>
 /// <typeparam name="T">This shall be "Enum [flags]" defined in children class</typeparam>
-public abstract class M_FlagSystem<T> : MonoBehaviour where T : Enum
+public abstract class FlagSystem<T> : MonoBehaviour where T : Enum
 {
     #region ATTRIBUTES
 
