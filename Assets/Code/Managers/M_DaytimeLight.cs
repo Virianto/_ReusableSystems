@@ -49,7 +49,6 @@ public class M_DaytimeLight : CircularIndicesNavigator<SO_SingleDaytimeConfig, M
             if(_currentDaytime != value)
             {
                 _currentDaytime = value;
-                CurrentDaytimeSwitched();
             }            
         }
     }
@@ -72,33 +71,30 @@ public class M_DaytimeLight : CircularIndicesNavigator<SO_SingleDaytimeConfig, M
     {
         if(Keyboard.current.allKeys[(int)nextKey - 1].wasPressedThisFrame)
         {
-            
+            CurrentDaytimeSwitched(true);
         }
         if (Keyboard.current.allKeys[(int)previousKey - 1].wasPressedThisFrame)
         {
-            
+            CurrentDaytimeSwitched(false);
         }
     }
 
-    void CurrentDaytimeSwitched()
+    void CurrentDaytimeSwitched(bool isNext)
     {
-        SetNewLightingData(_allItemsList[(int)CurrentDaytime].configData);
+        if(isNext)
+        {
+            SwitchToNextIndex();
+        }
+        else
+        {
+            SwitchToPreviewIndex();
+        }
+        
+        SetNewLightingData(_allItemsList[CurrentIndex].configData);
+        CurrentDaytime = _allItemsList[CurrentIndex].configData.daytime;
         
         OnDaytimeChanged?.Invoke();
     }
-
-    public void SwitchToPreviousDaytime()
-    {
-        //CurrentDaytime = (Daytime)(((int)CurrentDaytime + _allItemsList.Count - 1) % _allItemsList.Count);
-        SwitchToPreviewIndex();
-        //CurrentDaytime = _allItemsList[CurrentIndex].configData;
-    }
-
-    public void SwitchToNextDaytime()
-    {
-        //CurrentDaytime = (Daytime)(((int)CurrentDaytime + 1) % _allItemsList.Count);
-        SwitchToNextIndex();
-    }    
 
     /// <summary>
     /// This method shall be implemented using Unity awaitables or any other plugin if you
