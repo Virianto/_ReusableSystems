@@ -14,6 +14,9 @@ public class M_DaytimeLight : Singleton<M_DaytimeLight>
     #region ATTRIBUTES    
 
     #region Events
+    
+    public delegate void DaytimeSwitched();
+    public DaytimeSwitched OnDaytimeSwitched;   
 
     public delegate void DawnStarted();
     public DawnStarted OnDawnStarted;
@@ -45,9 +48,8 @@ public class M_DaytimeLight : Singleton<M_DaytimeLight>
     [SerializeField] [Range(0.1f, 15)] float transitionTime = 3;
 
     [SerializeField] Ease transitionEase = Ease.OutCubic;
-
     
-    Material myOwnMat;
+    Material _myOwnMat;
 
     Daytime _currentDaytime = Daytime.Midday;
 
@@ -74,8 +76,8 @@ public class M_DaytimeLight : Singleton<M_DaytimeLight>
     /// </summary>
     void Awake()
     {
-        myOwnMat = new Material(RenderSettings.skybox);
-        RenderSettings.skybox = myOwnMat;
+        _myOwnMat = new Material(RenderSettings.skybox);
+        RenderSettings.skybox = _myOwnMat;
     }
 
     void Update()
@@ -129,6 +131,11 @@ public class M_DaytimeLight : Singleton<M_DaytimeLight>
         CurrentDaytime = (Daytime)(((int)CurrentDaytime + 1) % allConfigDataList.Count);
     }    
 
+    /// <summary>
+    /// This method shall be implemented using Unity awaitables or any other plugin if you
+    /// want to avoid DOTween dependency
+    /// </summary>
+    /// <param name="lightingData"></param>
     void SetNewLightingData(D_SingleDaytime lightingData)
     {
         // Modifying lighting configuration
@@ -141,17 +148,17 @@ public class M_DaytimeLight : Singleton<M_DaytimeLight>
 
         // Modifying material configuration
 
-        DOTween.To(() => myOwnMat.GetFloat("_SunSize"), x => myOwnMat.SetFloat("_SunSize", x), lightingData.sunOrMoonSize, transitionTime).SetEase(transitionEase);
+        DOTween.To(() => _myOwnMat.GetFloat("_SunSize"), x => _myOwnMat.SetFloat("_SunSize", x), lightingData.sunOrMoonSize, transitionTime).SetEase(transitionEase);
 
-        DOTween.To(() => myOwnMat.GetFloat("_SunSizeConvergence"), x => myOwnMat.SetFloat("_SunSizeConvergence", x), lightingData.sunOrMoonSizeConvergence, transitionTime).SetEase(transitionEase);
+        DOTween.To(() => _myOwnMat.GetFloat("_SunSizeConvergence"), x => _myOwnMat.SetFloat("_SunSizeConvergence", x), lightingData.sunOrMoonSizeConvergence, transitionTime).SetEase(transitionEase);
 
-        DOTween.To(() => myOwnMat.GetFloat("_AtmosphereThickness"), x => myOwnMat.SetFloat("_AtmosphereThickness", x), lightingData.atmosphereThickness, transitionTime).SetEase(transitionEase);
+        DOTween.To(() => _myOwnMat.GetFloat("_AtmosphereThickness"), x => _myOwnMat.SetFloat("_AtmosphereThickness", x), lightingData.atmosphereThickness, transitionTime).SetEase(transitionEase);
 
-        DOTween.To(() => myOwnMat.GetColor("_SkyTint"), x => myOwnMat.SetColor("_SkyTint", x), lightingData.skyTint, transitionTime).SetEase(transitionEase);
+        DOTween.To(() => _myOwnMat.GetColor("_SkyTint"), x => _myOwnMat.SetColor("_SkyTint", x), lightingData.skyTint, transitionTime).SetEase(transitionEase);
 
-        DOTween.To(() => myOwnMat.GetColor("_GroundColor"), x => myOwnMat.SetColor("_GroundColor", x), lightingData.groundColor, transitionTime).SetEase(transitionEase);
+        DOTween.To(() => _myOwnMat.GetColor("_GroundColor"), x => _myOwnMat.SetColor("_GroundColor", x), lightingData.groundColor, transitionTime).SetEase(transitionEase);
 
-        DOTween.To(() => myOwnMat.GetFloat("_Exposure"), x => myOwnMat.SetFloat("_Exposure", x), lightingData.exposure, transitionTime).SetEase(transitionEase);
+        DOTween.To(() => _myOwnMat.GetFloat("_Exposure"), x => _myOwnMat.SetFloat("_Exposure", x), lightingData.exposure, transitionTime).SetEase(transitionEase);
     }
 
     #endregion
