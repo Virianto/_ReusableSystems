@@ -1,4 +1,5 @@
 using System;
+using Code.Utils;
 using UnityEngine;
 using System.Collections.Generic;
 
@@ -7,7 +8,7 @@ using System.Collections.Generic;
 /// of elements
 /// </summary>
 /// <typeparam name="T">The type that the elements of the list will have. It is defined in the child class</typeparam>
-public class CircularIndicesNavigator<T> : MonoBehaviour
+public class CircularIndicesNavigator<T, TSelf> : Singleton<TSelf> where TSelf : MonoBehaviour
 {
     #region ATTRIBUTES
 

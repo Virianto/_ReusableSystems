@@ -9,26 +9,14 @@ using UnityEngine.InputSystem;
 /// This class is responsible for maintaining control over the time of day represented in the scene
 /// and communicating it to other classes via events.
 /// </summary>
-public class M_DaytimeLight : Singleton<M_DaytimeLight>
+public class M_DaytimeLight : CircularIndicesNavigator<SO_SingleDaytimeConfig, M_DaytimeLight>
 {
     #region ATTRIBUTES    
 
     #region Events
     
-    public delegate void DaytimeSwitched();
-    public DaytimeSwitched OnDaytimeSwitched;   
-
-    public delegate void DawnStarted();
-    public DawnStarted OnDawnStarted;
-
-    public delegate void MiddayStarted();
-    public MiddayStarted OnMiddayStarted;
-
-    public delegate void TwilightStarted();
-    public TwilightStarted OnTwilightStarted;
-
-    public delegate void MidnightStarted();
-    public MidnightStarted OnMidnightStarted;
+    public delegate void DaytimeChanged();
+    public DaytimeChanged OnDaytimeChanged;   
 
     #endregion
 
@@ -38,7 +26,7 @@ public class M_DaytimeLight : Singleton<M_DaytimeLight>
 
     [Space(5)]
 
-    [SerializeField] List<SO_SingleDaytimeConfig> allConfigDataList = new();
+    //[SerializeField] List<SO_SingleDaytimeConfig> allConfigDataList = new();
 
     [Header("Editable values")]
 
@@ -84,19 +72,19 @@ public class M_DaytimeLight : Singleton<M_DaytimeLight>
     {
         if(Keyboard.current.allKeys[(int)nextKey - 1].wasPressedThisFrame)
         {
-            CurrentDaytime = Daytime.Midday;
+            
         }
         if (Keyboard.current.allKeys[(int)previousKey - 1].wasPressedThisFrame)
         {
-            CurrentDaytime = Daytime.Midnight;
+            
         }
     }
 
     void CurrentDaytimeSwitched()
     {
-        SetNewLightingData(allConfigDataList[(int)CurrentDaytime].configData);
+        SetNewLightingData(_allItemsList[(int)CurrentDaytime].configData);
 
-        switch (_currentDaytime)
+        /*switch (_currentDaytime)
         {
             case Daytime.Dawn:
             {
@@ -118,17 +106,20 @@ public class M_DaytimeLight : Singleton<M_DaytimeLight>
                 OnMidnightStarted?.Invoke();
                 break;
             }
-        }
+        }*/
     }
 
     public void SwitchToPreviousDaytime()
     {
-        CurrentDaytime = (Daytime)(((int)CurrentDaytime + allConfigDataList.Count - 1) % allConfigDataList.Count);
+        //CurrentDaytime = (Daytime)(((int)CurrentDaytime + _allItemsList.Count - 1) % _allItemsList.Count);
+        SwitchToPreviewIndex();
+        //CurrentDaytime = _allItemsList[CurrentIndex].configData;
     }
 
     public void SwitchToNextDaytime()
     {
-        CurrentDaytime = (Daytime)(((int)CurrentDaytime + 1) % allConfigDataList.Count);
+        //CurrentDaytime = (Daytime)(((int)CurrentDaytime + 1) % _allItemsList.Count);
+        SwitchToNextIndex();
     }    
 
     /// <summary>
