@@ -24,8 +24,6 @@ public class M_FlagSystemImplementation : FlagSystem<FlagsExample>
 {
     #region ATTRIBUTES
 
-    public FlagsExample _currentStatus;
-    
     [Header("Editable values")]
 
     [SerializeField] Key RandomKey_1;
@@ -51,33 +49,32 @@ public class M_FlagSystemImplementation : FlagSystem<FlagsExample>
 
     internal override void SetState(FlagsExample givenFlags)
     {
-        _currentStatus |= givenFlags;
+        SelfFlags |= givenFlags;
     }
 
     internal override void ClearState(FlagsExample givenFlags)
     {
-        _currentStatus &= ~givenFlags;
+        SelfFlags &= ~givenFlags;
     }
 
     internal override void ToggleState(FlagsExample givenFlags)
     {
-        _currentStatus ^= givenFlags;
+        SelfFlags ^= givenFlags;
     }
 
     internal override void SwitchStates(FlagsExample settingFlags, FlagsExample clearingFlags)
     {
-        _currentStatus |= settingFlags;
-        _currentStatus &= ~clearingFlags;
+        SelfFlags = (SelfFlags | settingFlags) & ~clearingFlags;
     }
 
     internal override void ClearAllStates()
     {
-        _currentStatus = 0;
+        SelfFlags = 0;
     }
 
     internal override bool CheckState(FlagsExample givenFlags)
     {
-        return _currentStatus.HasFlag(givenFlags);
+        return SelfFlags.HasFlag(givenFlags);
     }
 
     #endregion

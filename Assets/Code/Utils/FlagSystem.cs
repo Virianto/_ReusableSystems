@@ -25,7 +25,6 @@ public abstract class FlagSystem<T> : MonoBehaviour where T : Enum
         {
             _selfFlags = value;
             OnFlagsChanged?.Invoke(_selfFlags);
-            Debug.Log($"Flags changed to {_selfFlags}");
         }
     }
 
