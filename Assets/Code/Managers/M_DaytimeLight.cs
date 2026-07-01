@@ -83,30 +83,8 @@ public class M_DaytimeLight : CircularIndicesNavigator<SO_SingleDaytimeConfig, M
     void CurrentDaytimeSwitched()
     {
         SetNewLightingData(_allItemsList[(int)CurrentDaytime].configData);
-
-        /*switch (_currentDaytime)
-        {
-            case Daytime.Dawn:
-            {
-                OnDawnStarted?.Invoke();
-                break;
-            }
-            case Daytime.Midday:
-            {
-                OnMiddayStarted?.Invoke();
-                break;
-            }
-            case Daytime.Twilight:
-            {
-                OnTwilightStarted?.Invoke();
-                break;
-            }
-            case Daytime.Midnight:
-            {
-                OnMidnightStarted?.Invoke();
-                break;
-            }
-        }*/
+        
+        OnDaytimeChanged?.Invoke();
     }
 
     public void SwitchToPreviousDaytime()
