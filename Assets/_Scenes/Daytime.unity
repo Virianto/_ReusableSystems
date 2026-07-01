@@ -275,10 +275,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3f93e2cb1791b8e4ca883fcf14eae877, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::M_DaytimeLight
-  mainDirectionalLight: {fileID: 718055758}
-  allConfigDataList:
-  - {fileID: 11400000, guid: cb347bc23fbad0849b66dac52cb994d2, type: 2}
+  _allItemsList:
   - {fileID: 11400000, guid: b4400e1205b78a748a47e96d4ce29462, type: 2}
+  - {fileID: 11400000, guid: cb347bc23fbad0849b66dac52cb994d2, type: 2}
+  mainDirectionalLight: {fileID: 718055758}
   nextKey: 62
   previousKey: 61
   transitionTime: 3
