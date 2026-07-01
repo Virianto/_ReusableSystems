@@ -10,7 +10,9 @@
 
 > **Check:** all subsystems are currently in development
 
+- *Singleton Pattern*
 - *Command Pattern*
+- *Circular Indices Navigator*
 - *Realtime day/night environment lighting*
 
 ---
@@ -29,8 +31,8 @@
 
 1. **Clone** the project
 2. **Open it in Unity**
-3. Explore the contents inside **`Assets/`**
-4. Look inside **`Exports/`** and choose whatever tool you need
+3. Explore the contents inside **`Assets/_Scenes`**
+4. Most of the content you'll need will be in the Hierarchy of the scene
 
 ---
 
