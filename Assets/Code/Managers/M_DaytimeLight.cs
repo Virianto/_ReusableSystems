@@ -61,8 +61,9 @@ public class M_DaytimeLight : CircularIndicesNavigator<SO_SingleDaytimeConfig, M
     /// We reference the skybox material that the scene is currently using and avoid
     /// overwriting it during execution by creating a new instance
     /// </summary>
-    void Awake()
+    protected override void Awake()
     {
+        base.Awake();
         _myOwnMat = new Material(RenderSettings.skybox);
         RenderSettings.skybox = _myOwnMat;
     }
