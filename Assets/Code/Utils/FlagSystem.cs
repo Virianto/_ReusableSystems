@@ -15,6 +15,9 @@ public abstract class FlagSystem<T> : MonoBehaviour where T : Enum
 
     protected T _selfFlags;
 
+    /// <summary>
+    /// Every time the flags change, "OnFlagsChanged" will be called with the new value
+    /// </summary>
     internal T SelfFlags
     {
         get => _selfFlags;
