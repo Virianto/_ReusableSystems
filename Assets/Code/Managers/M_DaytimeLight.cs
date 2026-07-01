@@ -22,10 +22,6 @@ public class M_DaytimeLight : CircularIndicesNavigator<SO_SingleDaytimeConfig, M
 
     [SerializeField] Light mainDirectionalLight;
 
-    [Space(5)]
-
-    //[SerializeField] List<SO_SingleDaytimeConfig> allConfigDataList = new();
-
     [Header("Editable values")]
 
     [SerializeField] Key nextKey;
