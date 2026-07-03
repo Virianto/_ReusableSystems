@@ -10,6 +10,7 @@
 
 > **Check:** all subsystems are currently in development
 
+- *Customizable Cross Platform DEBUG SYSTEM*
 - *Singleton Pattern*
 - *Command Pattern*
 - *Circular Indices Navigator*
