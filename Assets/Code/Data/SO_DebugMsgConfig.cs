@@ -9,6 +9,8 @@ public class SO_DebugMsgConfig : ScriptableObject
 
 public enum DebugMsgType : byte
 {
+    MainTitle,
+    SecondaryTitle,
     Info,
     Warning,
     Error
