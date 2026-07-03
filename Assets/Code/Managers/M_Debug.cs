@@ -14,6 +14,12 @@ public class M_Debug : Singleton<M_Debug>
     // - Filter, format and build debug messages when needed before launching events
     
     #region ATTRIBUTES
+    
+    /// <summary>
+    /// Determines how debug messages shall be formatted before shown
+    /// </summary>
+    [SerializeField]
+    SO_DebugMsgConfig _debugMsgConfig;
 
     //public TMP_Text debugText;
     string _debugString = "";
