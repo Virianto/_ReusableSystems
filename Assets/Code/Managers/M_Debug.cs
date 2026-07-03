@@ -36,5 +36,10 @@ public class M_Debug : Singleton<M_Debug>
         Debug.Log(newText);
     }
 
+    public void AddFormattedTextToDebug(DebugMsgType msgType, string newText)
+    {
+        
+    }
+
     #endregion
 }
