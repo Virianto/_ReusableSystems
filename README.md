@@ -11,6 +11,7 @@
 > **Check:** all subsystems are currently in development
 
 - *Customizable Cross Platform DEBUG SYSTEM*
+- *Easily adjustable Cross Platfom INPUT SYSTEM*
 - *Singleton Pattern*
 - *Command Pattern*
 - *Circular Indices Navigator*
