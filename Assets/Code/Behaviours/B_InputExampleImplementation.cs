@@ -9,7 +9,7 @@ public class B_InputExampleImplementation : MonoBehaviour
 {
     #region ATTRIBUTES
     
-    GlobalInputActions.TestingMapActions testingMapActions;
+    //GlobalInputActions.TestingMapActions testingMapActions;
     
     #endregion
     
@@ -22,12 +22,19 @@ public class B_InputExampleImplementation : MonoBehaviour
 
     void Start()
     {
-        testingMapActions = M_GlobalInput.Instance.globalInputActions.TestingMap;
-        
-        testingMapActions.MainInteraction.performed += (InputAction.CallbackContext c) => MainInteraction();
+        //_mainInteraction = M_GlobalInput.Instance.globalInputActions.TestingMap.MainInteraction;
+        //_mainInteraction.performed += (InputAction.CallbackContext c) => MainInteraction();
+        //testingMapActions = M_GlobalInput.Instance.globalInputActions.TestingMap;
+
+        //testingMapActions.MainInteraction.performed += (InputAction.CallbackContext c) => MainInteraction();
+        M_GlobalInput.Instance.globalInputActions.TestingMap.MainInteraction.performed += MainInteraction;
     }
 
-    void MainInteraction()
+    /// <summary>
+    /// This method will be called whenever player presses the Main Interaction button
+    /// </summary>
+    /// <param name="c">Contains all info about the input action</param>
+    void MainInteraction(InputAction.CallbackContext c)
     {
         Debug.Log("Main Interaction");
     }

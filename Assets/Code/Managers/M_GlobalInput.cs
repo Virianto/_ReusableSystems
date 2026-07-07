@@ -34,6 +34,7 @@ public class M_GlobalInput : Singleton<M_GlobalInput>
 
     void Start()
     {
+        globalInputActions.Enable();
         currentInputControlScheme = globalInputActions.KeyboardMouseScheme;
     }
 
