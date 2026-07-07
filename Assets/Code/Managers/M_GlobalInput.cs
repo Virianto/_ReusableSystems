@@ -23,12 +23,6 @@ public class M_GlobalInput : Singleton<M_GlobalInput>
 
     public InputControlScheme currentInputControlScheme;
 
-    float horizontalMove = 0;
-    float verticalMove = 0;
-
-    bool isHelpActive;
-    bool isQuickHelpActive;
-
     #endregion
     
     #region METHODS
@@ -40,7 +34,6 @@ public class M_GlobalInput : Singleton<M_GlobalInput>
 
     void Start()
     {
-        // ! Aquí habría que leerlo de alguna forma al tener un Input del usuario para estar seguros de qué dispositivo es
         currentInputControlScheme = globalInputActions.KeyboardMouseScheme;
     }
 

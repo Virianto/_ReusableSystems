@@ -89,132 +89,77 @@ public partial class @GlobalInputActions: IInputActionCollection2, IDisposable
     ""name"": ""GlobalInputActions"",
     ""maps"": [
         {
-            ""name"": ""UserInputsMap"",
-            ""id"": ""e119dcfa-c7f9-4422-bb81-639504cd863d"",
+            ""name"": ""TestingMap"",
+            ""id"": ""52f84a26-7541-438d-b9ba-10ebdcf187c1"",
             ""actions"": [
                 {
-                    ""name"": ""Move"",
-                    ""type"": ""Value"",
-                    ""id"": ""7bed68f7-3410-4774-bc06-5ed9ce82e2cd"",
-                    ""expectedControlType"": ""Vector2"",
-                    ""processors"": """",
-                    ""interactions"": """",
-                    ""initialStateCheck"": true
-                },
-                {
-                    ""name"": ""Sprint"",
-                    ""type"": ""PassThrough"",
-                    ""id"": ""12d2286a-6738-452f-b1fd-a92bf9d1ccbe"",
+                    ""name"": ""Navigate"",
+                    ""type"": ""Button"",
+                    ""id"": ""7d700ab8-c61e-4245-ae09-bae9bccfcf84"",
                     ""expectedControlType"": """",
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
                 },
                 {
-                    ""name"": ""Jump"",
-                    ""type"": ""Button"",
-                    ""id"": ""2497e400-21ed-457a-82c6-ffda3bd5fd42"",
-                    ""expectedControlType"": ""Button"",
-                    ""processors"": """",
-                    ""interactions"": """",
-                    ""initialStateCheck"": false
-                },
-                {
-                    ""name"": ""Look"",
+                    ""name"": ""Move"",
                     ""type"": ""Value"",
-                    ""id"": ""5f05d242-2b10-4886-8693-02254c09223f"",
+                    ""id"": ""3bbb4d42-fc65-4c8b-9484-a4731d11e81b"",
                     ""expectedControlType"": ""Vector2"",
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": true
                 },
                 {
+                    ""name"": ""Look"",
+                    ""type"": ""Value"",
+                    ""id"": ""3b968808-2fe6-4743-91a5-f84dc706b862"",
+                    ""expectedControlType"": ""Vector2"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": true
+                },
+                {
+                    ""name"": ""ToggleDebug"",
+                    ""type"": ""Button"",
+                    ""id"": ""d98f2977-3102-4a21-9dd0-f6b77eaef4b2"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
                     ""name"": ""MainInteraction"",
                     ""type"": ""Button"",
-                    ""id"": ""76075db2-1b26-4bfb-8d9b-489e91a7d1a2"",
-                    ""expectedControlType"": ""Button"",
+                    ""id"": ""62944170-19da-449f-859b-7669e8556b5e"",
+                    ""expectedControlType"": """",
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
                 },
                 {
-                    ""name"": ""Help"",
+                    ""name"": ""SecondaryInteraction"",
                     ""type"": ""Button"",
-                    ""id"": ""017b177c-d30b-4839-b5e3-a619e04ee297"",
-                    ""expectedControlType"": ""Button"",
+                    ""id"": ""94fecf30-4329-4c94-b8ea-70fe8bc19883"",
+                    ""expectedControlType"": """",
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
                 },
                 {
-                    ""name"": ""QuickHelp"",
+                    ""name"": ""P/RInteraction"",
                     ""type"": ""Button"",
-                    ""id"": ""eff52675-958d-45ae-98c9-4ba038a1ff04"",
-                    ""expectedControlType"": ""Button"",
+                    ""id"": ""b0b4676c-048f-4d01-b237-ffe397d8d822"",
+                    ""expectedControlType"": """",
                     ""processors"": """",
-                    ""interactions"": ""Press(behavior=2)"",
+                    ""interactions"": """",
                     ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
                 {
-                    ""name"": ""KeyBoardComposite"",
-                    ""id"": ""9e7236a8-87d1-4051-9e57-30237893ef49"",
-                    ""path"": ""2DVector"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""Move"",
-                    ""isComposite"": true,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": ""up"",
-                    ""id"": ""243e3d23-216d-4973-b348-af2fe4241ff1"",
-                    ""path"": ""<Keyboard>/upArrow"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": ""Keyboard&Mouse"",
-                    ""action"": ""Move"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": true
-                },
-                {
-                    ""name"": ""down"",
-                    ""id"": ""00f569f7-aa01-4e33-9257-b37769985b69"",
-                    ""path"": ""<Keyboard>/downArrow"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": ""Keyboard&Mouse"",
-                    ""action"": ""Move"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": true
-                },
-                {
-                    ""name"": ""left"",
-                    ""id"": ""5d9bab32-02ad-4ac6-9694-76e606833389"",
-                    ""path"": ""<Keyboard>/leftArrow"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": ""Keyboard&Mouse"",
-                    ""action"": ""Move"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": true
-                },
-                {
-                    ""name"": ""right"",
-                    ""id"": ""e2621f06-d883-405a-8ee1-3d891cbc88ba"",
-                    ""path"": ""<Keyboard>/rightArrow"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": ""Keyboard&Mouse"",
-                    ""action"": ""Move"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": true
-                },
-                {
                     ""name"": ""WASD"",
-                    ""id"": ""3bf54d08-e66b-4fdc-a649-956ca4e84079"",
+                    ""id"": ""bd0f70b4-a6ce-4bc4-9d7c-4ff31e1dc0c9"",
                     ""path"": ""2DVector"",
                     ""interactions"": """",
                     ""processors"": """",
@@ -225,7 +170,7 @@ public partial class @GlobalInputActions: IInputActionCollection2, IDisposable
                 },
                 {
                     ""name"": ""up"",
-                    ""id"": ""9697d453-5dca-41a5-b11f-33a2f791e0df"",
+                    ""id"": ""8aeee1e5-a63a-41e4-9ea3-73dedf93daab"",
                     ""path"": ""<Keyboard>/w"",
                     ""interactions"": """",
                     ""processors"": """",
@@ -236,7 +181,7 @@ public partial class @GlobalInputActions: IInputActionCollection2, IDisposable
                 },
                 {
                     ""name"": ""down"",
-                    ""id"": ""242f4987-18dd-4f26-b44e-7c75e56dbb1a"",
+                    ""id"": ""9858dd47-dfc2-43b7-bda3-813f2bb13e73"",
                     ""path"": ""<Keyboard>/s"",
                     ""interactions"": """",
                     ""processors"": """",
@@ -247,7 +192,7 @@ public partial class @GlobalInputActions: IInputActionCollection2, IDisposable
                 },
                 {
                     ""name"": ""left"",
-                    ""id"": ""3d37d5fb-99d0-4bad-bd32-e883276584a4"",
+                    ""id"": ""339bcce0-01a3-4e2b-bd72-aeae320c6532"",
                     ""path"": ""<Keyboard>/a"",
                     ""interactions"": """",
                     ""processors"": """",
@@ -258,7 +203,7 @@ public partial class @GlobalInputActions: IInputActionCollection2, IDisposable
                 },
                 {
                     ""name"": ""right"",
-                    ""id"": ""851ca5f9-5f5b-4681-bb6b-641863a706d3"",
+                    ""id"": ""f6444226-8aec-4c51-8e0d-8cc3e22d79ad"",
                     ""path"": ""<Keyboard>/d"",
                     ""interactions"": """",
                     ""processors"": """",
@@ -269,51 +214,7 @@ public partial class @GlobalInputActions: IInputActionCollection2, IDisposable
                 },
                 {
                     ""name"": """",
-                    ""id"": ""8995eb67-e61f-4942-8850-9f0b32d3c192"",
-                    ""path"": ""<Keyboard>/e"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": ""Keyboard&Mouse"",
-                    ""action"": ""MainInteraction"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""97b924cf-4083-44b3-83c7-563965454859"",
-                    ""path"": ""<Mouse>/leftButton"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": ""Keyboard&Mouse"",
-                    ""action"": ""MainInteraction"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""d8454614-f076-4b50-8b59-57eff7c9a09c"",
-                    ""path"": ""<Keyboard>/i"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": ""Keyboard&Mouse"",
-                    ""action"": ""Help"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""1e99764f-5f48-41f3-b5fc-4709186a95d3"",
-                    ""path"": ""<Keyboard>/h"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": ""Keyboard&Mouse"",
-                    ""action"": ""QuickHelp"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""2fddb592-1a9d-43c9-b5cc-5001307b4416"",
+                    ""id"": ""9d0c5b1d-1d23-4601-bacd-1fb7e26306c3"",
                     ""path"": ""<Pointer>/delta"",
                     ""interactions"": """",
                     ""processors"": ""InvertVector2(invertX=false),ScaleVector2(x=0.05,y=0.05)"",
@@ -324,56 +225,89 @@ public partial class @GlobalInputActions: IInputActionCollection2, IDisposable
                 },
                 {
                     ""name"": """",
-                    ""id"": ""cf2363c7-6f7c-4522-85e4-8e5250bec003"",
-                    ""path"": ""<Gamepad>/rightStick"",
+                    ""id"": ""3718bff4-8228-4321-9ed7-31791368c887"",
+                    ""path"": ""<Keyboard>/i"",
                     ""interactions"": """",
-                    ""processors"": ""InvertVector2(invertX=false),StickDeadzone,ScaleVector2(x=300,y=300)"",
-                    ""groups"": """",
-                    ""action"": ""Look"",
+                    ""processors"": """",
+                    ""groups"": "";Keyboard&Mouse"",
+                    ""action"": ""ToggleDebug"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 },
                 {
                     ""name"": """",
-                    ""id"": ""089677b1-a8f9-44ba-8a3a-3a8884437522"",
+                    ""id"": ""6fc9da5d-3195-4d41-b13d-4433dcf9fb57"",
+                    ""path"": ""<Keyboard>/upArrow"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": "";Keyboard&Mouse"",
+                    ""action"": ""Navigate"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""1a20817c-4ed1-4452-a927-8763f25f05b5"",
+                    ""path"": ""<Keyboard>/downArrow"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": "";Keyboard&Mouse"",
+                    ""action"": ""Navigate"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""a2595bf3-3b23-409a-8189-a75ff7e486c7"",
+                    ""path"": ""<Keyboard>/leftArrow"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": "";Keyboard&Mouse"",
+                    ""action"": ""Navigate"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""eef32a82-79ea-4c2c-90f3-1cb16240026e"",
+                    ""path"": ""<Keyboard>/rightArrow"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": "";Keyboard&Mouse"",
+                    ""action"": ""Navigate"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""1b97b50b-2aa5-4c44-a91d-b29db444f4fe"",
+                    ""path"": ""<Keyboard>/e"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": "";Keyboard&Mouse"",
+                    ""action"": ""MainInteraction"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""6668dec6-7d52-4db9-8970-878a455d72e1"",
+                    ""path"": ""<Keyboard>/q"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": "";Keyboard&Mouse"",
+                    ""action"": ""SecondaryInteraction"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""3a11e0cc-ba70-4f30-87d7-6cc91b8b12ab"",
                     ""path"": ""<Keyboard>/space"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": ""Keyboard&Mouse"",
-                    ""action"": ""Jump"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""a8a9ca22-0d3d-4b47-abd2-3c5bf40c9da3"",
-                    ""path"": ""<Gamepad>/buttonSouth"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""Jump"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""91e9ddfe-9cd1-41b9-a566-9df889cf2813"",
-                    ""path"": ""<Keyboard>/leftShift"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": ""Keyboard&Mouse"",
-                    ""action"": ""Sprint"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""a4efddf8-6e1d-4a01-a871-62b2f7f11cf4"",
-                    ""path"": ""<Gamepad>/leftTrigger"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""Sprint"",
+                    ""groups"": "";Keyboard&Mouse"",
+                    ""action"": ""P/RInteraction"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -896,32 +830,77 @@ public partial class @GlobalInputActions: IInputActionCollection2, IDisposable
             ]
         },
         {
-            ""name"": ""TestingMap"",
-            ""id"": ""52f84a26-7541-438d-b9ba-10ebdcf187c1"",
+            ""name"": ""UserInputsMap"",
+            ""id"": ""e119dcfa-c7f9-4422-bb81-639504cd863d"",
             ""actions"": [
                 {
                     ""name"": ""Move"",
                     ""type"": ""Value"",
-                    ""id"": ""3bbb4d42-fc65-4c8b-9484-a4731d11e81b"",
+                    ""id"": ""7bed68f7-3410-4774-bc06-5ed9ce82e2cd"",
                     ""expectedControlType"": ""Vector2"",
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": true
                 },
                 {
-                    ""name"": ""ToggleDebug"",
-                    ""type"": ""Button"",
-                    ""id"": ""d98f2977-3102-4a21-9dd0-f6b77eaef4b2"",
+                    ""name"": ""Sprint"",
+                    ""type"": ""PassThrough"",
+                    ""id"": ""12d2286a-6738-452f-b1fd-a92bf9d1ccbe"",
                     ""expectedControlType"": """",
                     ""processors"": """",
                     ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Jump"",
+                    ""type"": ""Button"",
+                    ""id"": ""2497e400-21ed-457a-82c6-ffda3bd5fd42"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Look"",
+                    ""type"": ""Value"",
+                    ""id"": ""5f05d242-2b10-4886-8693-02254c09223f"",
+                    ""expectedControlType"": ""Vector2"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": true
+                },
+                {
+                    ""name"": ""MainInteraction"",
+                    ""type"": ""Button"",
+                    ""id"": ""76075db2-1b26-4bfb-8d9b-489e91a7d1a2"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Help"",
+                    ""type"": ""Button"",
+                    ""id"": ""017b177c-d30b-4839-b5e3-a619e04ee297"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""QuickHelp"",
+                    ""type"": ""Button"",
+                    ""id"": ""eff52675-958d-45ae-98c9-4ba038a1ff04"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": ""Press(behavior=2)"",
                     ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
                 {
-                    ""name"": ""WASD"",
-                    ""id"": ""bd0f70b4-a6ce-4bc4-9d7c-4ff31e1dc0c9"",
+                    ""name"": ""KeyBoardComposite"",
+                    ""id"": ""9e7236a8-87d1-4051-9e57-30237893ef49"",
                     ""path"": ""2DVector"",
                     ""interactions"": """",
                     ""processors"": """",
@@ -932,7 +911,62 @@ public partial class @GlobalInputActions: IInputActionCollection2, IDisposable
                 },
                 {
                     ""name"": ""up"",
-                    ""id"": ""8aeee1e5-a63a-41e4-9ea3-73dedf93daab"",
+                    ""id"": ""243e3d23-216d-4973-b348-af2fe4241ff1"",
+                    ""path"": ""<Keyboard>/upArrow"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Keyboard&Mouse"",
+                    ""action"": ""Move"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""down"",
+                    ""id"": ""00f569f7-aa01-4e33-9257-b37769985b69"",
+                    ""path"": ""<Keyboard>/downArrow"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Keyboard&Mouse"",
+                    ""action"": ""Move"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""left"",
+                    ""id"": ""5d9bab32-02ad-4ac6-9694-76e606833389"",
+                    ""path"": ""<Keyboard>/leftArrow"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Keyboard&Mouse"",
+                    ""action"": ""Move"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""right"",
+                    ""id"": ""e2621f06-d883-405a-8ee1-3d891cbc88ba"",
+                    ""path"": ""<Keyboard>/rightArrow"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Keyboard&Mouse"",
+                    ""action"": ""Move"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""WASD"",
+                    ""id"": ""3bf54d08-e66b-4fdc-a649-956ca4e84079"",
+                    ""path"": ""2DVector"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Move"",
+                    ""isComposite"": true,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": ""up"",
+                    ""id"": ""9697d453-5dca-41a5-b11f-33a2f791e0df"",
                     ""path"": ""<Keyboard>/w"",
                     ""interactions"": """",
                     ""processors"": """",
@@ -943,7 +977,7 @@ public partial class @GlobalInputActions: IInputActionCollection2, IDisposable
                 },
                 {
                     ""name"": ""down"",
-                    ""id"": ""9858dd47-dfc2-43b7-bda3-813f2bb13e73"",
+                    ""id"": ""242f4987-18dd-4f26-b44e-7c75e56dbb1a"",
                     ""path"": ""<Keyboard>/s"",
                     ""interactions"": """",
                     ""processors"": """",
@@ -954,7 +988,7 @@ public partial class @GlobalInputActions: IInputActionCollection2, IDisposable
                 },
                 {
                     ""name"": ""left"",
-                    ""id"": ""339bcce0-01a3-4e2b-bd72-aeae320c6532"",
+                    ""id"": ""3d37d5fb-99d0-4bad-bd32-e883276584a4"",
                     ""path"": ""<Keyboard>/a"",
                     ""interactions"": """",
                     ""processors"": """",
@@ -965,7 +999,7 @@ public partial class @GlobalInputActions: IInputActionCollection2, IDisposable
                 },
                 {
                     ""name"": ""right"",
-                    ""id"": ""f6444226-8aec-4c51-8e0d-8cc3e22d79ad"",
+                    ""id"": ""851ca5f9-5f5b-4681-bb6b-641863a706d3"",
                     ""path"": ""<Keyboard>/d"",
                     ""interactions"": """",
                     ""processors"": """",
@@ -976,12 +1010,111 @@ public partial class @GlobalInputActions: IInputActionCollection2, IDisposable
                 },
                 {
                     ""name"": """",
-                    ""id"": ""3718bff4-8228-4321-9ed7-31791368c887"",
+                    ""id"": ""8995eb67-e61f-4942-8850-9f0b32d3c192"",
+                    ""path"": ""<Keyboard>/e"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Keyboard&Mouse"",
+                    ""action"": ""MainInteraction"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""97b924cf-4083-44b3-83c7-563965454859"",
+                    ""path"": ""<Mouse>/leftButton"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Keyboard&Mouse"",
+                    ""action"": ""MainInteraction"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""d8454614-f076-4b50-8b59-57eff7c9a09c"",
                     ""path"": ""<Keyboard>/i"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": "";Keyboard&Mouse"",
-                    ""action"": ""ToggleDebug"",
+                    ""groups"": ""Keyboard&Mouse"",
+                    ""action"": ""Help"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""1e99764f-5f48-41f3-b5fc-4709186a95d3"",
+                    ""path"": ""<Keyboard>/h"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Keyboard&Mouse"",
+                    ""action"": ""QuickHelp"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""2fddb592-1a9d-43c9-b5cc-5001307b4416"",
+                    ""path"": ""<Pointer>/delta"",
+                    ""interactions"": """",
+                    ""processors"": ""InvertVector2(invertX=false),ScaleVector2(x=0.05,y=0.05)"",
+                    ""groups"": ""Keyboard&Mouse"",
+                    ""action"": ""Look"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""cf2363c7-6f7c-4522-85e4-8e5250bec003"",
+                    ""path"": ""<Gamepad>/rightStick"",
+                    ""interactions"": """",
+                    ""processors"": ""InvertVector2(invertX=false),StickDeadzone,ScaleVector2(x=300,y=300)"",
+                    ""groups"": """",
+                    ""action"": ""Look"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""089677b1-a8f9-44ba-8a3a-3a8884437522"",
+                    ""path"": ""<Keyboard>/space"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Keyboard&Mouse"",
+                    ""action"": ""Jump"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""a8a9ca22-0d3d-4b47-abd2-3c5bf40c9da3"",
+                    ""path"": ""<Gamepad>/buttonSouth"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Jump"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""91e9ddfe-9cd1-41b9-a566-9df889cf2813"",
+                    ""path"": ""<Keyboard>/leftShift"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Keyboard&Mouse"",
+                    ""action"": ""Sprint"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""a4efddf8-6e1d-4a01-a871-62b2f7f11cf4"",
+                    ""path"": ""<Gamepad>/leftTrigger"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Sprint"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -1039,15 +1172,15 @@ public partial class @GlobalInputActions: IInputActionCollection2, IDisposable
         }
     ]
 }");
-        // UserInputsMap
-        m_UserInputsMap = asset.FindActionMap("UserInputsMap", throwIfNotFound: true);
-        m_UserInputsMap_Move = m_UserInputsMap.FindAction("Move", throwIfNotFound: true);
-        m_UserInputsMap_Sprint = m_UserInputsMap.FindAction("Sprint", throwIfNotFound: true);
-        m_UserInputsMap_Jump = m_UserInputsMap.FindAction("Jump", throwIfNotFound: true);
-        m_UserInputsMap_Look = m_UserInputsMap.FindAction("Look", throwIfNotFound: true);
-        m_UserInputsMap_MainInteraction = m_UserInputsMap.FindAction("MainInteraction", throwIfNotFound: true);
-        m_UserInputsMap_Help = m_UserInputsMap.FindAction("Help", throwIfNotFound: true);
-        m_UserInputsMap_QuickHelp = m_UserInputsMap.FindAction("QuickHelp", throwIfNotFound: true);
+        // TestingMap
+        m_TestingMap = asset.FindActionMap("TestingMap", throwIfNotFound: true);
+        m_TestingMap_Navigate = m_TestingMap.FindAction("Navigate", throwIfNotFound: true);
+        m_TestingMap_Move = m_TestingMap.FindAction("Move", throwIfNotFound: true);
+        m_TestingMap_Look = m_TestingMap.FindAction("Look", throwIfNotFound: true);
+        m_TestingMap_ToggleDebug = m_TestingMap.FindAction("ToggleDebug", throwIfNotFound: true);
+        m_TestingMap_MainInteraction = m_TestingMap.FindAction("MainInteraction", throwIfNotFound: true);
+        m_TestingMap_SecondaryInteraction = m_TestingMap.FindAction("SecondaryInteraction", throwIfNotFound: true);
+        m_TestingMap_PRInteraction = m_TestingMap.FindAction("P/RInteraction", throwIfNotFound: true);
         // UI
         m_UI = asset.FindActionMap("UI", throwIfNotFound: true);
         m_UI_Navigate = m_UI.FindAction("Navigate", throwIfNotFound: true);
@@ -1060,17 +1193,22 @@ public partial class @GlobalInputActions: IInputActionCollection2, IDisposable
         m_UI_RightClick = m_UI.FindAction("RightClick", throwIfNotFound: true);
         m_UI_TrackedDevicePosition = m_UI.FindAction("TrackedDevicePosition", throwIfNotFound: true);
         m_UI_TrackedDeviceOrientation = m_UI.FindAction("TrackedDeviceOrientation", throwIfNotFound: true);
-        // TestingMap
-        m_TestingMap = asset.FindActionMap("TestingMap", throwIfNotFound: true);
-        m_TestingMap_Move = m_TestingMap.FindAction("Move", throwIfNotFound: true);
-        m_TestingMap_ToggleDebug = m_TestingMap.FindAction("ToggleDebug", throwIfNotFound: true);
+        // UserInputsMap
+        m_UserInputsMap = asset.FindActionMap("UserInputsMap", throwIfNotFound: true);
+        m_UserInputsMap_Move = m_UserInputsMap.FindAction("Move", throwIfNotFound: true);
+        m_UserInputsMap_Sprint = m_UserInputsMap.FindAction("Sprint", throwIfNotFound: true);
+        m_UserInputsMap_Jump = m_UserInputsMap.FindAction("Jump", throwIfNotFound: true);
+        m_UserInputsMap_Look = m_UserInputsMap.FindAction("Look", throwIfNotFound: true);
+        m_UserInputsMap_MainInteraction = m_UserInputsMap.FindAction("MainInteraction", throwIfNotFound: true);
+        m_UserInputsMap_Help = m_UserInputsMap.FindAction("Help", throwIfNotFound: true);
+        m_UserInputsMap_QuickHelp = m_UserInputsMap.FindAction("QuickHelp", throwIfNotFound: true);
     }
 
     ~@GlobalInputActions()
     {
-        UnityEngine.Debug.Assert(!m_UserInputsMap.enabled, "This will cause a leak and performance issues, GlobalInputActions.UserInputsMap.Disable() has not been called.");
-        UnityEngine.Debug.Assert(!m_UI.enabled, "This will cause a leak and performance issues, GlobalInputActions.UI.Disable() has not been called.");
         UnityEngine.Debug.Assert(!m_TestingMap.enabled, "This will cause a leak and performance issues, GlobalInputActions.TestingMap.Disable() has not been called.");
+        UnityEngine.Debug.Assert(!m_UI.enabled, "This will cause a leak and performance issues, GlobalInputActions.UI.Disable() has not been called.");
+        UnityEngine.Debug.Assert(!m_UserInputsMap.enabled, "This will cause a leak and performance issues, GlobalInputActions.UserInputsMap.Disable() has not been called.");
     }
 
     /// <summary>
@@ -1143,59 +1281,59 @@ public partial class @GlobalInputActions: IInputActionCollection2, IDisposable
         return asset.FindBinding(bindingMask, out action);
     }
 
-    // UserInputsMap
-    private readonly InputActionMap m_UserInputsMap;
-    private List<IUserInputsMapActions> m_UserInputsMapActionsCallbackInterfaces = new List<IUserInputsMapActions>();
-    private readonly InputAction m_UserInputsMap_Move;
-    private readonly InputAction m_UserInputsMap_Sprint;
-    private readonly InputAction m_UserInputsMap_Jump;
-    private readonly InputAction m_UserInputsMap_Look;
-    private readonly InputAction m_UserInputsMap_MainInteraction;
-    private readonly InputAction m_UserInputsMap_Help;
-    private readonly InputAction m_UserInputsMap_QuickHelp;
+    // TestingMap
+    private readonly InputActionMap m_TestingMap;
+    private List<ITestingMapActions> m_TestingMapActionsCallbackInterfaces = new List<ITestingMapActions>();
+    private readonly InputAction m_TestingMap_Navigate;
+    private readonly InputAction m_TestingMap_Move;
+    private readonly InputAction m_TestingMap_Look;
+    private readonly InputAction m_TestingMap_ToggleDebug;
+    private readonly InputAction m_TestingMap_MainInteraction;
+    private readonly InputAction m_TestingMap_SecondaryInteraction;
+    private readonly InputAction m_TestingMap_PRInteraction;
     /// <summary>
-    /// Provides access to input actions defined in input action map "UserInputsMap".
+    /// Provides access to input actions defined in input action map "TestingMap".
     /// </summary>
-    public struct UserInputsMapActions
+    public struct TestingMapActions
     {
         private @GlobalInputActions m_Wrapper;
 
         /// <summary>
         /// Construct a new instance of the input action map wrapper class.
         /// </summary>
-        public UserInputsMapActions(@GlobalInputActions wrapper) { m_Wrapper = wrapper; }
+        public TestingMapActions(@GlobalInputActions wrapper) { m_Wrapper = wrapper; }
         /// <summary>
-        /// Provides access to the underlying input action "UserInputsMap/Move".
+        /// Provides access to the underlying input action "TestingMap/Navigate".
         /// </summary>
-        public InputAction @Move => m_Wrapper.m_UserInputsMap_Move;
+        public InputAction @Navigate => m_Wrapper.m_TestingMap_Navigate;
         /// <summary>
-        /// Provides access to the underlying input action "UserInputsMap/Sprint".
+        /// Provides access to the underlying input action "TestingMap/Move".
         /// </summary>
-        public InputAction @Sprint => m_Wrapper.m_UserInputsMap_Sprint;
+        public InputAction @Move => m_Wrapper.m_TestingMap_Move;
         /// <summary>
-        /// Provides access to the underlying input action "UserInputsMap/Jump".
+        /// Provides access to the underlying input action "TestingMap/Look".
         /// </summary>
-        public InputAction @Jump => m_Wrapper.m_UserInputsMap_Jump;
+        public InputAction @Look => m_Wrapper.m_TestingMap_Look;
         /// <summary>
-        /// Provides access to the underlying input action "UserInputsMap/Look".
+        /// Provides access to the underlying input action "TestingMap/ToggleDebug".
         /// </summary>
-        public InputAction @Look => m_Wrapper.m_UserInputsMap_Look;
+        public InputAction @ToggleDebug => m_Wrapper.m_TestingMap_ToggleDebug;
         /// <summary>
-        /// Provides access to the underlying input action "UserInputsMap/MainInteraction".
+        /// Provides access to the underlying input action "TestingMap/MainInteraction".
         /// </summary>
-        public InputAction @MainInteraction => m_Wrapper.m_UserInputsMap_MainInteraction;
+        public InputAction @MainInteraction => m_Wrapper.m_TestingMap_MainInteraction;
         /// <summary>
-        /// Provides access to the underlying input action "UserInputsMap/Help".
+        /// Provides access to the underlying input action "TestingMap/SecondaryInteraction".
         /// </summary>
-        public InputAction @Help => m_Wrapper.m_UserInputsMap_Help;
+        public InputAction @SecondaryInteraction => m_Wrapper.m_TestingMap_SecondaryInteraction;
         /// <summary>
-        /// Provides access to the underlying input action "UserInputsMap/QuickHelp".
+        /// Provides access to the underlying input action "TestingMap/PRInteraction".
         /// </summary>
-        public InputAction @QuickHelp => m_Wrapper.m_UserInputsMap_QuickHelp;
+        public InputAction @PRInteraction => m_Wrapper.m_TestingMap_PRInteraction;
         /// <summary>
         /// Provides access to the underlying input action map instance.
         /// </summary>
-        public InputActionMap Get() { return m_Wrapper.m_UserInputsMap; }
+        public InputActionMap Get() { return m_Wrapper.m_TestingMap; }
         /// <inheritdoc cref="UnityEngine.InputSystem.InputActionMap.Enable()" />
         public void Enable() { Get().Enable(); }
         /// <inheritdoc cref="UnityEngine.InputSystem.InputActionMap.Disable()" />
@@ -1203,9 +1341,9 @@ public partial class @GlobalInputActions: IInputActionCollection2, IDisposable
         /// <inheritdoc cref="UnityEngine.InputSystem.InputActionMap.enabled" />
         public bool enabled => Get().enabled;
         /// <summary>
-        /// Implicitly converts an <see ref="UserInputsMapActions" /> to an <see ref="InputActionMap" /> instance.
+        /// Implicitly converts an <see ref="TestingMapActions" /> to an <see ref="InputActionMap" /> instance.
         /// </summary>
-        public static implicit operator InputActionMap(UserInputsMapActions set) { return set.Get(); }
+        public static implicit operator InputActionMap(TestingMapActions set) { return set.Get(); }
         /// <summary>
         /// Adds <see cref="InputAction.started"/>, <see cref="InputAction.performed"/> and <see cref="InputAction.canceled"/> callbacks provided via <param cref="instance" /> on all input actions contained in this map.
         /// </summary>
@@ -1213,32 +1351,32 @@ public partial class @GlobalInputActions: IInputActionCollection2, IDisposable
         /// <remarks>
         /// If <paramref name="instance" /> is <c>null</c> or <paramref name="instance"/> have already been added this method does nothing.
         /// </remarks>
-        /// <seealso cref="UserInputsMapActions" />
-        public void AddCallbacks(IUserInputsMapActions instance)
+        /// <seealso cref="TestingMapActions" />
+        public void AddCallbacks(ITestingMapActions instance)
         {
-            if (instance == null || m_Wrapper.m_UserInputsMapActionsCallbackInterfaces.Contains(instance)) return;
-            m_Wrapper.m_UserInputsMapActionsCallbackInterfaces.Add(instance);
+            if (instance == null || m_Wrapper.m_TestingMapActionsCallbackInterfaces.Contains(instance)) return;
+            m_Wrapper.m_TestingMapActionsCallbackInterfaces.Add(instance);
+            @Navigate.started += instance.OnNavigate;
+            @Navigate.performed += instance.OnNavigate;
+            @Navigate.canceled += instance.OnNavigate;
             @Move.started += instance.OnMove;
             @Move.performed += instance.OnMove;
             @Move.canceled += instance.OnMove;
-            @Sprint.started += instance.OnSprint;
-            @Sprint.performed += instance.OnSprint;
-            @Sprint.canceled += instance.OnSprint;
-            @Jump.started += instance.OnJump;
-            @Jump.performed += instance.OnJump;
-            @Jump.canceled += instance.OnJump;
             @Look.started += instance.OnLook;
             @Look.performed += instance.OnLook;
             @Look.canceled += instance.OnLook;
+            @ToggleDebug.started += instance.OnToggleDebug;
+            @ToggleDebug.performed += instance.OnToggleDebug;
+            @ToggleDebug.canceled += instance.OnToggleDebug;
             @MainInteraction.started += instance.OnMainInteraction;
             @MainInteraction.performed += instance.OnMainInteraction;
             @MainInteraction.canceled += instance.OnMainInteraction;
-            @Help.started += instance.OnHelp;
-            @Help.performed += instance.OnHelp;
-            @Help.canceled += instance.OnHelp;
-            @QuickHelp.started += instance.OnQuickHelp;
-            @QuickHelp.performed += instance.OnQuickHelp;
-            @QuickHelp.canceled += instance.OnQuickHelp;
+            @SecondaryInteraction.started += instance.OnSecondaryInteraction;
+            @SecondaryInteraction.performed += instance.OnSecondaryInteraction;
+            @SecondaryInteraction.canceled += instance.OnSecondaryInteraction;
+            @PRInteraction.started += instance.OnPRInteraction;
+            @PRInteraction.performed += instance.OnPRInteraction;
+            @PRInteraction.canceled += instance.OnPRInteraction;
         }
 
         /// <summary>
@@ -1247,39 +1385,39 @@ public partial class @GlobalInputActions: IInputActionCollection2, IDisposable
         /// <remarks>
         /// Calling this method when <paramref name="instance" /> have not previously been registered has no side-effects.
         /// </remarks>
-        /// <seealso cref="UserInputsMapActions" />
-        private void UnregisterCallbacks(IUserInputsMapActions instance)
+        /// <seealso cref="TestingMapActions" />
+        private void UnregisterCallbacks(ITestingMapActions instance)
         {
+            @Navigate.started -= instance.OnNavigate;
+            @Navigate.performed -= instance.OnNavigate;
+            @Navigate.canceled -= instance.OnNavigate;
             @Move.started -= instance.OnMove;
             @Move.performed -= instance.OnMove;
             @Move.canceled -= instance.OnMove;
-            @Sprint.started -= instance.OnSprint;
-            @Sprint.performed -= instance.OnSprint;
-            @Sprint.canceled -= instance.OnSprint;
-            @Jump.started -= instance.OnJump;
-            @Jump.performed -= instance.OnJump;
-            @Jump.canceled -= instance.OnJump;
             @Look.started -= instance.OnLook;
             @Look.performed -= instance.OnLook;
             @Look.canceled -= instance.OnLook;
+            @ToggleDebug.started -= instance.OnToggleDebug;
+            @ToggleDebug.performed -= instance.OnToggleDebug;
+            @ToggleDebug.canceled -= instance.OnToggleDebug;
             @MainInteraction.started -= instance.OnMainInteraction;
             @MainInteraction.performed -= instance.OnMainInteraction;
             @MainInteraction.canceled -= instance.OnMainInteraction;
-            @Help.started -= instance.OnHelp;
-            @Help.performed -= instance.OnHelp;
-            @Help.canceled -= instance.OnHelp;
-            @QuickHelp.started -= instance.OnQuickHelp;
-            @QuickHelp.performed -= instance.OnQuickHelp;
-            @QuickHelp.canceled -= instance.OnQuickHelp;
+            @SecondaryInteraction.started -= instance.OnSecondaryInteraction;
+            @SecondaryInteraction.performed -= instance.OnSecondaryInteraction;
+            @SecondaryInteraction.canceled -= instance.OnSecondaryInteraction;
+            @PRInteraction.started -= instance.OnPRInteraction;
+            @PRInteraction.performed -= instance.OnPRInteraction;
+            @PRInteraction.canceled -= instance.OnPRInteraction;
         }
 
         /// <summary>
-        /// Unregisters <param cref="instance" /> and unregisters all input action callbacks via <see cref="UserInputsMapActions.UnregisterCallbacks(IUserInputsMapActions)" />.
+        /// Unregisters <param cref="instance" /> and unregisters all input action callbacks via <see cref="TestingMapActions.UnregisterCallbacks(ITestingMapActions)" />.
         /// </summary>
-        /// <seealso cref="UserInputsMapActions.UnregisterCallbacks(IUserInputsMapActions)" />
-        public void RemoveCallbacks(IUserInputsMapActions instance)
+        /// <seealso cref="TestingMapActions.UnregisterCallbacks(ITestingMapActions)" />
+        public void RemoveCallbacks(ITestingMapActions instance)
         {
-            if (m_Wrapper.m_UserInputsMapActionsCallbackInterfaces.Remove(instance))
+            if (m_Wrapper.m_TestingMapActionsCallbackInterfaces.Remove(instance))
                 UnregisterCallbacks(instance);
         }
 
@@ -1289,21 +1427,21 @@ public partial class @GlobalInputActions: IInputActionCollection2, IDisposable
         /// <remarks>
         /// If <paramref name="instance" /> is <c>null</c>, calling this method will only unregister all existing callbacks but not register any new callbacks.
         /// </remarks>
-        /// <seealso cref="UserInputsMapActions.AddCallbacks(IUserInputsMapActions)" />
-        /// <seealso cref="UserInputsMapActions.RemoveCallbacks(IUserInputsMapActions)" />
-        /// <seealso cref="UserInputsMapActions.UnregisterCallbacks(IUserInputsMapActions)" />
-        public void SetCallbacks(IUserInputsMapActions instance)
+        /// <seealso cref="TestingMapActions.AddCallbacks(ITestingMapActions)" />
+        /// <seealso cref="TestingMapActions.RemoveCallbacks(ITestingMapActions)" />
+        /// <seealso cref="TestingMapActions.UnregisterCallbacks(ITestingMapActions)" />
+        public void SetCallbacks(ITestingMapActions instance)
         {
-            foreach (var item in m_Wrapper.m_UserInputsMapActionsCallbackInterfaces)
+            foreach (var item in m_Wrapper.m_TestingMapActionsCallbackInterfaces)
                 UnregisterCallbacks(item);
-            m_Wrapper.m_UserInputsMapActionsCallbackInterfaces.Clear();
+            m_Wrapper.m_TestingMapActionsCallbackInterfaces.Clear();
             AddCallbacks(instance);
         }
     }
     /// <summary>
-    /// Provides a new <see cref="UserInputsMapActions" /> instance referencing this action map.
+    /// Provides a new <see cref="TestingMapActions" /> instance referencing this action map.
     /// </summary>
-    public UserInputsMapActions @UserInputsMap => new UserInputsMapActions(this);
+    public TestingMapActions @TestingMap => new TestingMapActions(this);
 
     // UI
     private readonly InputActionMap m_UI;
@@ -1500,34 +1638,59 @@ public partial class @GlobalInputActions: IInputActionCollection2, IDisposable
     /// </summary>
     public UIActions @UI => new UIActions(this);
 
-    // TestingMap
-    private readonly InputActionMap m_TestingMap;
-    private List<ITestingMapActions> m_TestingMapActionsCallbackInterfaces = new List<ITestingMapActions>();
-    private readonly InputAction m_TestingMap_Move;
-    private readonly InputAction m_TestingMap_ToggleDebug;
+    // UserInputsMap
+    private readonly InputActionMap m_UserInputsMap;
+    private List<IUserInputsMapActions> m_UserInputsMapActionsCallbackInterfaces = new List<IUserInputsMapActions>();
+    private readonly InputAction m_UserInputsMap_Move;
+    private readonly InputAction m_UserInputsMap_Sprint;
+    private readonly InputAction m_UserInputsMap_Jump;
+    private readonly InputAction m_UserInputsMap_Look;
+    private readonly InputAction m_UserInputsMap_MainInteraction;
+    private readonly InputAction m_UserInputsMap_Help;
+    private readonly InputAction m_UserInputsMap_QuickHelp;
     /// <summary>
-    /// Provides access to input actions defined in input action map "TestingMap".
+    /// Provides access to input actions defined in input action map "UserInputsMap".
     /// </summary>
-    public struct TestingMapActions
+    public struct UserInputsMapActions
     {
         private @GlobalInputActions m_Wrapper;
 
         /// <summary>
         /// Construct a new instance of the input action map wrapper class.
         /// </summary>
-        public TestingMapActions(@GlobalInputActions wrapper) { m_Wrapper = wrapper; }
+        public UserInputsMapActions(@GlobalInputActions wrapper) { m_Wrapper = wrapper; }
         /// <summary>
-        /// Provides access to the underlying input action "TestingMap/Move".
+        /// Provides access to the underlying input action "UserInputsMap/Move".
         /// </summary>
-        public InputAction @Move => m_Wrapper.m_TestingMap_Move;
+        public InputAction @Move => m_Wrapper.m_UserInputsMap_Move;
         /// <summary>
-        /// Provides access to the underlying input action "TestingMap/ToggleDebug".
+        /// Provides access to the underlying input action "UserInputsMap/Sprint".
         /// </summary>
-        public InputAction @ToggleDebug => m_Wrapper.m_TestingMap_ToggleDebug;
+        public InputAction @Sprint => m_Wrapper.m_UserInputsMap_Sprint;
+        /// <summary>
+        /// Provides access to the underlying input action "UserInputsMap/Jump".
+        /// </summary>
+        public InputAction @Jump => m_Wrapper.m_UserInputsMap_Jump;
+        /// <summary>
+        /// Provides access to the underlying input action "UserInputsMap/Look".
+        /// </summary>
+        public InputAction @Look => m_Wrapper.m_UserInputsMap_Look;
+        /// <summary>
+        /// Provides access to the underlying input action "UserInputsMap/MainInteraction".
+        /// </summary>
+        public InputAction @MainInteraction => m_Wrapper.m_UserInputsMap_MainInteraction;
+        /// <summary>
+        /// Provides access to the underlying input action "UserInputsMap/Help".
+        /// </summary>
+        public InputAction @Help => m_Wrapper.m_UserInputsMap_Help;
+        /// <summary>
+        /// Provides access to the underlying input action "UserInputsMap/QuickHelp".
+        /// </summary>
+        public InputAction @QuickHelp => m_Wrapper.m_UserInputsMap_QuickHelp;
         /// <summary>
         /// Provides access to the underlying input action map instance.
         /// </summary>
-        public InputActionMap Get() { return m_Wrapper.m_TestingMap; }
+        public InputActionMap Get() { return m_Wrapper.m_UserInputsMap; }
         /// <inheritdoc cref="UnityEngine.InputSystem.InputActionMap.Enable()" />
         public void Enable() { Get().Enable(); }
         /// <inheritdoc cref="UnityEngine.InputSystem.InputActionMap.Disable()" />
@@ -1535,9 +1698,9 @@ public partial class @GlobalInputActions: IInputActionCollection2, IDisposable
         /// <inheritdoc cref="UnityEngine.InputSystem.InputActionMap.enabled" />
         public bool enabled => Get().enabled;
         /// <summary>
-        /// Implicitly converts an <see ref="TestingMapActions" /> to an <see ref="InputActionMap" /> instance.
+        /// Implicitly converts an <see ref="UserInputsMapActions" /> to an <see ref="InputActionMap" /> instance.
         /// </summary>
-        public static implicit operator InputActionMap(TestingMapActions set) { return set.Get(); }
+        public static implicit operator InputActionMap(UserInputsMapActions set) { return set.Get(); }
         /// <summary>
         /// Adds <see cref="InputAction.started"/>, <see cref="InputAction.performed"/> and <see cref="InputAction.canceled"/> callbacks provided via <param cref="instance" /> on all input actions contained in this map.
         /// </summary>
@@ -1545,17 +1708,32 @@ public partial class @GlobalInputActions: IInputActionCollection2, IDisposable
         /// <remarks>
         /// If <paramref name="instance" /> is <c>null</c> or <paramref name="instance"/> have already been added this method does nothing.
         /// </remarks>
-        /// <seealso cref="TestingMapActions" />
-        public void AddCallbacks(ITestingMapActions instance)
+        /// <seealso cref="UserInputsMapActions" />
+        public void AddCallbacks(IUserInputsMapActions instance)
         {
-            if (instance == null || m_Wrapper.m_TestingMapActionsCallbackInterfaces.Contains(instance)) return;
-            m_Wrapper.m_TestingMapActionsCallbackInterfaces.Add(instance);
+            if (instance == null || m_Wrapper.m_UserInputsMapActionsCallbackInterfaces.Contains(instance)) return;
+            m_Wrapper.m_UserInputsMapActionsCallbackInterfaces.Add(instance);
             @Move.started += instance.OnMove;
             @Move.performed += instance.OnMove;
             @Move.canceled += instance.OnMove;
-            @ToggleDebug.started += instance.OnToggleDebug;
-            @ToggleDebug.performed += instance.OnToggleDebug;
-            @ToggleDebug.canceled += instance.OnToggleDebug;
+            @Sprint.started += instance.OnSprint;
+            @Sprint.performed += instance.OnSprint;
+            @Sprint.canceled += instance.OnSprint;
+            @Jump.started += instance.OnJump;
+            @Jump.performed += instance.OnJump;
+            @Jump.canceled += instance.OnJump;
+            @Look.started += instance.OnLook;
+            @Look.performed += instance.OnLook;
+            @Look.canceled += instance.OnLook;
+            @MainInteraction.started += instance.OnMainInteraction;
+            @MainInteraction.performed += instance.OnMainInteraction;
+            @MainInteraction.canceled += instance.OnMainInteraction;
+            @Help.started += instance.OnHelp;
+            @Help.performed += instance.OnHelp;
+            @Help.canceled += instance.OnHelp;
+            @QuickHelp.started += instance.OnQuickHelp;
+            @QuickHelp.performed += instance.OnQuickHelp;
+            @QuickHelp.canceled += instance.OnQuickHelp;
         }
 
         /// <summary>
@@ -1564,24 +1742,39 @@ public partial class @GlobalInputActions: IInputActionCollection2, IDisposable
         /// <remarks>
         /// Calling this method when <paramref name="instance" /> have not previously been registered has no side-effects.
         /// </remarks>
-        /// <seealso cref="TestingMapActions" />
-        private void UnregisterCallbacks(ITestingMapActions instance)
+        /// <seealso cref="UserInputsMapActions" />
+        private void UnregisterCallbacks(IUserInputsMapActions instance)
         {
             @Move.started -= instance.OnMove;
             @Move.performed -= instance.OnMove;
             @Move.canceled -= instance.OnMove;
-            @ToggleDebug.started -= instance.OnToggleDebug;
-            @ToggleDebug.performed -= instance.OnToggleDebug;
-            @ToggleDebug.canceled -= instance.OnToggleDebug;
+            @Sprint.started -= instance.OnSprint;
+            @Sprint.performed -= instance.OnSprint;
+            @Sprint.canceled -= instance.OnSprint;
+            @Jump.started -= instance.OnJump;
+            @Jump.performed -= instance.OnJump;
+            @Jump.canceled -= instance.OnJump;
+            @Look.started -= instance.OnLook;
+            @Look.performed -= instance.OnLook;
+            @Look.canceled -= instance.OnLook;
+            @MainInteraction.started -= instance.OnMainInteraction;
+            @MainInteraction.performed -= instance.OnMainInteraction;
+            @MainInteraction.canceled -= instance.OnMainInteraction;
+            @Help.started -= instance.OnHelp;
+            @Help.performed -= instance.OnHelp;
+            @Help.canceled -= instance.OnHelp;
+            @QuickHelp.started -= instance.OnQuickHelp;
+            @QuickHelp.performed -= instance.OnQuickHelp;
+            @QuickHelp.canceled -= instance.OnQuickHelp;
         }
 
         /// <summary>
-        /// Unregisters <param cref="instance" /> and unregisters all input action callbacks via <see cref="TestingMapActions.UnregisterCallbacks(ITestingMapActions)" />.
+        /// Unregisters <param cref="instance" /> and unregisters all input action callbacks via <see cref="UserInputsMapActions.UnregisterCallbacks(IUserInputsMapActions)" />.
         /// </summary>
-        /// <seealso cref="TestingMapActions.UnregisterCallbacks(ITestingMapActions)" />
-        public void RemoveCallbacks(ITestingMapActions instance)
+        /// <seealso cref="UserInputsMapActions.UnregisterCallbacks(IUserInputsMapActions)" />
+        public void RemoveCallbacks(IUserInputsMapActions instance)
         {
-            if (m_Wrapper.m_TestingMapActionsCallbackInterfaces.Remove(instance))
+            if (m_Wrapper.m_UserInputsMapActionsCallbackInterfaces.Remove(instance))
                 UnregisterCallbacks(instance);
         }
 
@@ -1591,21 +1784,21 @@ public partial class @GlobalInputActions: IInputActionCollection2, IDisposable
         /// <remarks>
         /// If <paramref name="instance" /> is <c>null</c>, calling this method will only unregister all existing callbacks but not register any new callbacks.
         /// </remarks>
-        /// <seealso cref="TestingMapActions.AddCallbacks(ITestingMapActions)" />
-        /// <seealso cref="TestingMapActions.RemoveCallbacks(ITestingMapActions)" />
-        /// <seealso cref="TestingMapActions.UnregisterCallbacks(ITestingMapActions)" />
-        public void SetCallbacks(ITestingMapActions instance)
+        /// <seealso cref="UserInputsMapActions.AddCallbacks(IUserInputsMapActions)" />
+        /// <seealso cref="UserInputsMapActions.RemoveCallbacks(IUserInputsMapActions)" />
+        /// <seealso cref="UserInputsMapActions.UnregisterCallbacks(IUserInputsMapActions)" />
+        public void SetCallbacks(IUserInputsMapActions instance)
         {
-            foreach (var item in m_Wrapper.m_TestingMapActionsCallbackInterfaces)
+            foreach (var item in m_Wrapper.m_UserInputsMapActionsCallbackInterfaces)
                 UnregisterCallbacks(item);
-            m_Wrapper.m_TestingMapActionsCallbackInterfaces.Clear();
+            m_Wrapper.m_UserInputsMapActionsCallbackInterfaces.Clear();
             AddCallbacks(instance);
         }
     }
     /// <summary>
-    /// Provides a new <see cref="TestingMapActions" /> instance referencing this action map.
+    /// Provides a new <see cref="UserInputsMapActions" /> instance referencing this action map.
     /// </summary>
-    public TestingMapActions @TestingMap => new TestingMapActions(this);
+    public UserInputsMapActions @UserInputsMap => new UserInputsMapActions(this);
     private int m_KeyboardMouseSchemeIndex = -1;
     /// <summary>
     /// Provides access to the input control scheme.
@@ -1646,12 +1839,19 @@ public partial class @GlobalInputActions: IInputActionCollection2, IDisposable
         }
     }
     /// <summary>
-    /// Interface to implement callback methods for all input action callbacks associated with input actions defined by "UserInputsMap" which allows adding and removing callbacks.
+    /// Interface to implement callback methods for all input action callbacks associated with input actions defined by "TestingMap" which allows adding and removing callbacks.
     /// </summary>
-    /// <seealso cref="UserInputsMapActions.AddCallbacks(IUserInputsMapActions)" />
-    /// <seealso cref="UserInputsMapActions.RemoveCallbacks(IUserInputsMapActions)" />
-    public interface IUserInputsMapActions
+    /// <seealso cref="TestingMapActions.AddCallbacks(ITestingMapActions)" />
+    /// <seealso cref="TestingMapActions.RemoveCallbacks(ITestingMapActions)" />
+    public interface ITestingMapActions
     {
+        /// <summary>
+        /// Method invoked when associated input action "Navigate" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// </summary>
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
+        void OnNavigate(InputAction.CallbackContext context);
         /// <summary>
         /// Method invoked when associated input action "Move" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
         /// </summary>
@@ -1660,26 +1860,19 @@ public partial class @GlobalInputActions: IInputActionCollection2, IDisposable
         /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
         void OnMove(InputAction.CallbackContext context);
         /// <summary>
-        /// Method invoked when associated input action "Sprint" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
-        /// </summary>
-        /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
-        /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
-        /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
-        void OnSprint(InputAction.CallbackContext context);
-        /// <summary>
-        /// Method invoked when associated input action "Jump" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
-        /// </summary>
-        /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
-        /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
-        /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
-        void OnJump(InputAction.CallbackContext context);
-        /// <summary>
         /// Method invoked when associated input action "Look" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
         /// </summary>
         /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
         /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
         /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
         void OnLook(InputAction.CallbackContext context);
+        /// <summary>
+        /// Method invoked when associated input action "ToggleDebug" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// </summary>
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
+        void OnToggleDebug(InputAction.CallbackContext context);
         /// <summary>
         /// Method invoked when associated input action "MainInteraction" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
         /// </summary>
@@ -1688,19 +1881,19 @@ public partial class @GlobalInputActions: IInputActionCollection2, IDisposable
         /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
         void OnMainInteraction(InputAction.CallbackContext context);
         /// <summary>
-        /// Method invoked when associated input action "Help" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// Method invoked when associated input action "SecondaryInteraction" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
         /// </summary>
         /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
         /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
         /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
-        void OnHelp(InputAction.CallbackContext context);
+        void OnSecondaryInteraction(InputAction.CallbackContext context);
         /// <summary>
-        /// Method invoked when associated input action "QuickHelp" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// Method invoked when associated input action "P/RInteraction" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
         /// </summary>
         /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
         /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
         /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
-        void OnQuickHelp(InputAction.CallbackContext context);
+        void OnPRInteraction(InputAction.CallbackContext context);
     }
     /// <summary>
     /// Interface to implement callback methods for all input action callbacks associated with input actions defined by "UI" which allows adding and removing callbacks.
@@ -1781,11 +1974,11 @@ public partial class @GlobalInputActions: IInputActionCollection2, IDisposable
         void OnTrackedDeviceOrientation(InputAction.CallbackContext context);
     }
     /// <summary>
-    /// Interface to implement callback methods for all input action callbacks associated with input actions defined by "TestingMap" which allows adding and removing callbacks.
+    /// Interface to implement callback methods for all input action callbacks associated with input actions defined by "UserInputsMap" which allows adding and removing callbacks.
     /// </summary>
-    /// <seealso cref="TestingMapActions.AddCallbacks(ITestingMapActions)" />
-    /// <seealso cref="TestingMapActions.RemoveCallbacks(ITestingMapActions)" />
-    public interface ITestingMapActions
+    /// <seealso cref="UserInputsMapActions.AddCallbacks(IUserInputsMapActions)" />
+    /// <seealso cref="UserInputsMapActions.RemoveCallbacks(IUserInputsMapActions)" />
+    public interface IUserInputsMapActions
     {
         /// <summary>
         /// Method invoked when associated input action "Move" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
@@ -1795,11 +1988,46 @@ public partial class @GlobalInputActions: IInputActionCollection2, IDisposable
         /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
         void OnMove(InputAction.CallbackContext context);
         /// <summary>
-        /// Method invoked when associated input action "ToggleDebug" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// Method invoked when associated input action "Sprint" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
         /// </summary>
         /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
         /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
         /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
-        void OnToggleDebug(InputAction.CallbackContext context);
+        void OnSprint(InputAction.CallbackContext context);
+        /// <summary>
+        /// Method invoked when associated input action "Jump" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// </summary>
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
+        void OnJump(InputAction.CallbackContext context);
+        /// <summary>
+        /// Method invoked when associated input action "Look" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// </summary>
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
+        void OnLook(InputAction.CallbackContext context);
+        /// <summary>
+        /// Method invoked when associated input action "MainInteraction" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// </summary>
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
+        void OnMainInteraction(InputAction.CallbackContext context);
+        /// <summary>
+        /// Method invoked when associated input action "Help" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// </summary>
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
+        void OnHelp(InputAction.CallbackContext context);
+        /// <summary>
+        /// Method invoked when associated input action "QuickHelp" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// </summary>
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
+        void OnQuickHelp(InputAction.CallbackContext context);
     }
 }
