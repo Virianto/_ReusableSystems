@@ -1,3 +1,5 @@
+using System;
+using System.Collections.Generic;
 using Code.Utils;
 using UnityEngine;
 using UnityEngine.Audio;
@@ -27,12 +29,24 @@ public class M_Audio : Singleton<M_Audio>
     [SerializeField] GameObject musicAudioSourceObject;
     [SerializeField] GameObject soundsAudioSourceObject;
     [SerializeField] GameObject otherAudioSourceObject;
+    
+    Dictionary<AudioGroup, GameObject> _audioSources;
 
     #endregion
     
     #region METHODS
 
-    
+    void Awake()
+    {
+        _audioSources = new Dictionary<AudioGroup, GameObject>
+        {
+            { AudioGroup.Dialogs, dialogAudioSourceObject },
+            { AudioGroup.FX, fxAudioSourceObject },
+            { AudioGroup.Music, musicAudioSourceObject },
+            { AudioGroup.Sounds, soundsAudioSourceObject },
+            { AudioGroup.Other, otherAudioSourceObject }
+        };
+    }
 
     #endregion
 }
