@@ -12,6 +12,7 @@
 
 - *Customizable Cross Platform DEBUG SYSTEM*
 - *Easily adjustable Cross Platfom INPUT SYSTEM*
+- *Flexible Global AUDIO SYSTEM*
 - *Singleton Pattern*
 - *Command Pattern*
 - *Circular Indices Navigator*
