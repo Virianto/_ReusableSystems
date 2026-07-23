@@ -47,6 +47,41 @@ public class M_Audio : Singleton<M_Audio>
             { AudioGroup.Other, otherAudioSourceObject }
         };
     }
+    
+    public void PlaySingleClip3D(D_SingleAudioClip clipDatatoPlay, Vector3 originPosition = default(Vector3))
+    {
+        if (!_audioSources.TryGetValue(clipDatatoPlay.mixerChannel, out GameObject newClipOriginObject))
+            return;
+        
+        AudioSource objectAudioSource = Instantiate(
+            newClipOriginObject,
+            originPosition,
+            Quaternion.identity
+            ).GetComponent<AudioSource>();
+        
+        float lifeTime = clipDatatoPlay.audioClip.length;
+
+        if (clipDatatoPlay.isOneShot)
+        {
+            objectAudioSource.PlayOneShot(clipDatatoPlay.audioClip);
+        }
+        else
+        {
+            objectAudioSource.clip = clipDatatoPlay.audioClip;
+            objectAudioSource.Play();
+        }
+    
+        Destroy(newClipOriginObject, lifeTime);
+    }
+    
+    /// <summary>
+    /// 
+    /// </summary>
+    /// <param name="fxClip"></param>
+    public void PlayFX(AudioClip fxClip)
+    {
+        fxAudioSourceObject.GetComponent<AudioSource>().PlayOneShot(fxClip);
+    }
 
     #endregion
 }
