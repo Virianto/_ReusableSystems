@@ -4,7 +4,7 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "SingleDaytimeConfig", menuName = "Scriptable Objects/D_SingleDaytime", order = 1)]
 public class SO_SingleDaytimeConfig : ScriptableObject
 {
-    public D_SingleDaytime configData;
+    public D_SingleDaytime data;
 }
 
 public enum Daytime : byte

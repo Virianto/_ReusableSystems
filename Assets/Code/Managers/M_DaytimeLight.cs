@@ -85,8 +85,8 @@ public class M_DaytimeLight : CircularIndicesNavigator<SO_SingleDaytimeConfig, M
             SwitchToPreviewIndex();
         }
         
-        SetNewLightingData(_allItemsList[CurrentIndex].configData);
-        CurrentDaytime = _allItemsList[CurrentIndex].configData.daytime;
+        SetNewLightingData(_allItemsList[CurrentIndex].data);
+        CurrentDaytime = _allItemsList[CurrentIndex].data.daytime;
         
         OnDaytimeChanged?.Invoke();
     }

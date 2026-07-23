@@ -4,7 +4,7 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "DebugMsgConfig", menuName = "Scriptable Objects/D_DebugMsg", order = 1)]
 public class SO_DebugMsgConfig : ScriptableObject
 {
-    public D_DebugMsg configData;
+    public D_DebugMsg data;
 }
 
 public enum DebugMsgType : byte
